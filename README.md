@@ -10,6 +10,7 @@ QUEBRA_LINHA: \n<br />
 IDENTACAO: "   " (Três espaços vazios)<br />
 COMENTARIO_SIMPLES: #<br />
 COMENTARIO_MULTILINHAS: ''' '''<br />
+IDENTIFICADOR: var, var1, _var (Não podendo iniciar com números ou conter caracteres especiais)<br />
 OPERADOR_ARITMETICO: +, -, *, /, %<br />
 OPERADOR_LOGICO: and, or, not<br />
 OPERADOR_RELACIONAL: >, <, >=, <=, ==, !=<br />
