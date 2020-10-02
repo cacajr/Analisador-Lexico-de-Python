@@ -1,7 +1,7 @@
 # Código fonte do Analisador Léxico da Linguagem Python
 Ao importar este projeto em sua IDE ou Editor de código será encontrado na pasta src/python as classes que compõem este analisador.
 
-O arquivo Python.flex contém o código referente a criação do analisador léxico, nele contém os símbolos que o nalisador irá trabalhar, os que não irão ser usados, as palavras reservadas e os Tokens gerados dos seus respectivos símbolos.
+O arquivo Python.flex contém o código referente a criação do analisador léxico, nele contém os símbolos que o analisador irá trabalhar, os que não irão ser usados, as palavras reservadas e os Tokens gerados dos seus respectivos símbolos.
 
 A classe Generator é a geradora do analisador léxico escrito no arquivo Python.flex. Ao executá-la um arquivo .java é gerado com o mesmo nome do arquivo .flex. Neste caso, é gerado Python.java. Caso o códido de escrita do arquivo Python.flex receba alterações, deve-se apagar o arquivo gerado Python.java e gera-lo novamente através da classe Generator.
 
