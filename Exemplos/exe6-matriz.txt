@@ -1,0 +1,4 @@
+matriz = [["11", "12"], ["21", "22"]]
+for i in matriz:
+   for j in i:
+      print(j)
