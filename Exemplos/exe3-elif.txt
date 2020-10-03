@@ -1,0 +1,7 @@
+a = "2"
+if(a == '1'):
+   print("É um!")
+elif(a == '2'):
+   print("É dois!")
+else:
+   print('É 3!')
