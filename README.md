@@ -1,5 +1,5 @@
 # Analisador Léxico da Linguagem Python
-Este é um analisador léxico da linguagem Python produzido em Java para o trabalho final da disciplina de Compiladores. O analisador deste repositório está dividido em três partes: código fonte, executável e um .txt com exemplo de código em Python para teste. Dentro de cada pasta existe uma documentação explicando como usar cada um.
+Este é um analisador léxico da linguagem Python produzido em Java para o trabalho final da disciplina de Compiladores. O analisador deste repositório está dividido em três partes: código fonte, executável e um conjunto de exemplos de código em Python para testes. Dentro de cada pasta existe uma documentação explicando como usar cada um.
 
 # Detalhes do Analisador
 ## Tokens
@@ -28,7 +28,7 @@ PALAVRA_RESERVADA: if, else, elif, for, while, def, return, try, except, as, in,
 Símbolos como:  ,\t,\r, , não são analisados.
 
 ## Exemplo
-Ao ser executado o exemplo.txt contido nesse repositório, a saída a seguir deve ser retornada:
+Ao ser executado o exe-complexo.txt contido na pasta Exemplos desse repositório, a saída a seguir deve ser retornada:
 
 COMENTARIO_MULTILINHAS -> ''' Testando Analisador Léxico<br />
 da Linguagem Python '''<br />
