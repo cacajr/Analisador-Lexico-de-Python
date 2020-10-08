@@ -14,12 +14,12 @@ public class Analyze {
 		
 		while(true) {
 			
-			// LEITURA DO TECLADO DO USU¡RIO
-			System.out.println("Digite o endereÁo do arquivo: Ex:(C:/Users/CarlosJr/Desktop/arq.txt)");
+			// LEITURA DO TECLADO DO USU√ÅRIO
+			System.out.println("Digite o endere√ßo do arquivo: Ex:(C:/Users/CarlosJr/Desktop/arq.txt)");
 			Scanner in = new Scanner(System.in);
 			String addr = in.next();
 			
-			//ENDERE«O DO ARQUIVO TXT QUE DESEJA EFETUAR A AN¡LISE L…XICA
+			//ENDERE√áO DO ARQUIVO TXT QUE DESEJA EFETUAR A AN√ÅLISE L√âXICA
 			//EX: C:/Users/CarlosJr/Desktop/arq.txt
 			String path = addr;
 			
@@ -49,7 +49,7 @@ public class Analyze {
 						break;
 					}
 					
-					if(pLex.lexeme.equals("   ") | pLex.lexeme.equals("\n")) {
+					if(pLex.lexeme.equals("\t") | pLex.lexeme.equals("   ") | pLex.lexeme.equals("\n")) {
 						System.out.println(token);
 					} else {
 						System.out.println(token + " -> " + pLex.lexeme);
@@ -60,12 +60,12 @@ public class Analyze {
 				break;
 				
 			} catch (FileNotFoundException e) {
-				System.out.println("Arquivo n„o encontrado!");
+				System.out.println("Arquivo n√£o encontrado!");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 			
-			//CONTINUO O PROGRAMA, POIS O ENDERE«O DO ARQUIVO N√O FOI ENCOTRADO AINDA
+			//CONTINUO O PROGRAMA, POIS O ENDERE√áO DO ARQUIVO N√ÉO FOI ENCOTRADO AINDA
 			
 		}
 
