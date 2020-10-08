@@ -7,7 +7,7 @@ Os Tokens escolhidos podem ser visualizados dentro da pasta Código Fonte/src/py
 
 ERROR: Símbolo não tratado pelo analisador<br />
 QUEBRA_LINHA: \n<br />
-IDENTACAO: "   " (Três espaços vazios)<br />
+IDENTACAO: "   " (Três espaços vazios) ou "\t" (Tecla TAB)<br />
 COMENTARIO_SIMPLES: #<br />
 COMENTARIO_MULTILINHAS: ''' '''<br />
 IDENTIFICADOR: var, var1, _var (Não podendo iniciar com números ou conter caracteres especiais)<br />
