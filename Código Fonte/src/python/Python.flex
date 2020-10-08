@@ -7,7 +7,7 @@ import static python.Token.*;
 
 L = [a-zA-Z_]
 D = [0-9]
-WHITE=[ \t\r,]
+WHITE=[ \r,]
 
 %{
 public String lexeme;
@@ -18,25 +18,25 @@ public String lexeme;
 /*Pular linha*/
 ("\n") {lexeme = yytext(); return QUEBRA_LINHA;}
 
-/*Identação*/
-("   ") {lexeme = yytext(); return IDENTACAO;}
+/*IdentaÃ§Ã£o*/
+("   " | "\t") {lexeme = yytext(); return IDENTACAO;}
 
-/*Marcador de comentário simples*/
+/*Marcador de comentÃ¡rio simples*/
 "#"[^\n]* {lexeme = yytext(); return COMENTARIO_SIMPLES;}
 
-/*Marcador de comentário multilinhas*/
+/*Marcador de comentÃ¡rio multilinhas*/
 "'''"[^*]*"''"([^/][^*]*"''")*"'" {lexeme = yytext(); return COMENTARIO_MULTILINHAS;}
 
-/*Operadores aritméticos*/
+/*Operadores aritmÃ©ticos*/
 ("+" | "-" | "*" | "/" | "%") {lexeme = yytext(); return OPERADOR_ARITMETICO;}
 
-/*Operadores lógicos*/
+/*Operadores lÃ³gicos*/
 ("and" | "or" | "not") {lexeme = yytext(); return OPERADOR_LOGICO;}
 
 /*Operadores relacionais*/
 (">" | "<" | ">=" | "<=" | "==" | "!=") {lexeme = yytext(); return OPERADOR_RELACIONAL;}
 
-/*Operador de atribuição*/
+/*Operador de atribuiÃ§Ã£o*/
 ("=" | "+=" | "-=" | "*=" | "/=") {lexeme = yytext(); return OPERADOR_ATRIBUICAO;}
 
 /*Delimitador Aberto*/
@@ -48,10 +48,10 @@ public String lexeme;
 /*Comando*/
 (":") {lexeme = yytext(); return FACA;}
 
-/*Números inteiros*/
+/*NÃºmeros inteiros*/
 {D}+ {lexeme = yytext(); return NUMERO_INTEIRO;}
 
-/*Números flutuantes*/
+/*NÃºmeros flutuantes*/
 {D}+"."{D}* {lexeme = yytext(); return NUMERO_FLUTUANTE;}
 
 /*Strings*/
@@ -66,7 +66,7 @@ public String lexeme;
 /*Palavras reservadas*/
 (if | else | elif | for | while | def | return | try | except | as | in | False | True | break | import | from | continue | del | class | global | None | is | and | or | assert) {lexeme = yytext(); return PALAVRA_RESERVADA;}
 
-/*Identificador de variável*/
+/*Identificador de variÃ¡vel*/
 ({L}+ | {L}+{D}+) {lexeme = yytext(); return IDENTIFICADOR;}
 
 . {return ERROR;}
