@@ -25,7 +25,7 @@ LISTA_ABERTA: [<br />
 LISTA_FECHADA: ]<br />
 PALAVRA_RESERVADA: if, else, elif, for, while, def, return, try, except, as, in, False, True, break, import, from, continue, del, class, global, None, is, and, or, assert<br />
 
-Símbolos como:  ,\t,\r, , não são analisados.
+Símbolos como:  ,\r, , não são analisados.
 
 ## Exemplo
 Ao ser executado o exe-complexo.txt contido na pasta Exemplos desse repositório, a saída a seguir deve ser retornada:
